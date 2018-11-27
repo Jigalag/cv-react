@@ -4,12 +4,12 @@ self.__precacheManifest = [
     "url": "/cv-react/static/media/visbycf-regularoblique-webfont.84f50bcd.woff2"
   },
   {
-    "revision": "af2919bc31210f446c88",
-    "url": "/cv-react/static/css/main.42037ffa.chunk.css"
+    "revision": "a5571a8b04939a2a8790",
+    "url": "/cv-react/static/css/main.5429f7e5.chunk.css"
   },
   {
-    "revision": "20af1e2c662b06a56c5a",
-    "url": "/cv-react/static/js/1.20af1e2c.chunk.js"
+    "revision": "9361a919f8d91152876d",
+    "url": "/cv-react/static/js/1.9361a919.chunk.js"
   },
   {
     "revision": "a30b86c60f04273a6de1",
@@ -20,12 +20,12 @@ self.__precacheManifest = [
     "url": "/cv-react/static/media/visbycf-bold-webfont.56ec440b.woff2"
   },
   {
-    "revision": "8d4ed4fd116e11860736a1c1c4f3c8cd",
-    "url": "/cv-react/static/media/visbycf-demibold-webfont.8d4ed4fd.woff2"
-  },
-  {
     "revision": "55fa157e45f6c1f4e34654665ba2f85e",
     "url": "/cv-react/static/media/visbycf-extrabold-webfont.55fa157e.woff2"
+  },
+  {
+    "revision": "8d4ed4fd116e11860736a1c1c4f3c8cd",
+    "url": "/cv-react/static/media/visbycf-demibold-webfont.8d4ed4fd.woff2"
   },
   {
     "revision": "c0b6df5e8ae1cc8e1fbe8efd2f6a64a2",
@@ -48,16 +48,20 @@ self.__precacheManifest = [
     "url": "/cv-react/static/media/visbycf-regular-webfont.b7f6fd6a.woff2"
   },
   {
-    "revision": "af2919bc31210f446c88",
-    "url": "/cv-react/static/js/main.af2919bc.chunk.js"
-  },
-  {
-    "revision": "3fe3817acc806e5513270dfc7f26f130",
-    "url": "/cv-react/static/media/visbycf-extrabold-webfont.3fe3817a.woff"
+    "revision": "a5571a8b04939a2a8790",
+    "url": "/cv-react/static/js/main.a5571a8b.chunk.js"
   },
   {
     "revision": "878d7e4fa23da26a1500967e5905f71c",
     "url": "/cv-react/static/media/visbycf-bold-webfont.878d7e4f.woff"
+  },
+  {
+    "revision": "f5946495cd561ece00863b0c75492f31",
+    "url": "/cv-react/static/media/visbycf-demibold-webfont.f5946495.woff"
+  },
+  {
+    "revision": "3fe3817acc806e5513270dfc7f26f130",
+    "url": "/cv-react/static/media/visbycf-extrabold-webfont.3fe3817a.woff"
   },
   {
     "revision": "325e7902106fc0ba71423ec0685b0609",
@@ -68,20 +72,16 @@ self.__precacheManifest = [
     "url": "/cv-react/static/media/visbycf-light-webfont.bf4629a2.woff"
   },
   {
-    "revision": "f5946495cd561ece00863b0c75492f31",
-    "url": "/cv-react/static/media/visbycf-demibold-webfont.f5946495.woff"
-  },
-  {
     "revision": "d54846720fe85589ef9774bec1839484",
     "url": "/cv-react/static/media/visbycf-medium-webfont.d5484672.woff"
   },
   {
-    "revision": "b34b3d194a34f37c8d2036d193f2e5e2",
-    "url": "/cv-react/static/media/visbycf-regular-webfont.b34b3d19.woff"
-  },
-  {
     "revision": "9a749fa7c51deaf2b25c3475ca54bfb4",
     "url": "/cv-react/static/media/visbycf-mediumoblique-webfont.9a749fa7.woff"
+  },
+  {
+    "revision": "b34b3d194a34f37c8d2036d193f2e5e2",
+    "url": "/cv-react/static/media/visbycf-regular-webfont.b34b3d19.woff"
   },
   {
     "revision": "109e806e300aa8635ef52eb9c94561f4",
@@ -96,7 +96,7 @@ self.__precacheManifest = [
     "url": "/cv-react/static/media/preview.dcfe0e19.jpg"
   },
   {
-    "revision": "e08aad8cc716ddd418012ebd8b4e1a07",
+    "revision": "8e69ae8541aea0f6f1d0d47e6eea14e6",
     "url": "/cv-react/index.html"
   }
 ];
