@@ -6,7 +6,7 @@ class Header extends Component {
         return (
             <header>
                 <div className="container">
-                    <NavLink href="#" className="headerLogo" exact to={'/'}>
+                    <NavLink href="#" className="headerLogo" exact to={'/react-cv/'}>
                         <img src="/img/logo.png"
                              alt="Alex.V - Front-End Developer"
                              title="Alex.V - Front-End Developer" />
@@ -15,24 +15,24 @@ class Header extends Component {
                     <nav className="headerNavigation">
                         <ul>
                             <li>
-                                <NavLink href="#" exact to={'/'}
+                                <NavLink href="#" exact to={'/react-cv/'}
                                       activeClassName="active">Home</NavLink>
                             </li>
                             <li>
-                                <NavLink href="#" to={'/about'}
+                                <NavLink href="#" to={'/react-cv/about'}
                                       activeClassName="active">About</NavLink>
                             </li>
                             <li>
-                                <NavLink href="#" to={'/projects'}
+                                <NavLink href="#" to={'/react-cv/projects'}
                                       activeClassName="active"
                                       className="{'active': currentState == 'Project'}">Projects</NavLink>
                             </li>
                             <li>
-                                <NavLink href="#" to={'/work'}
+                                <NavLink href="#" to={'/react-cv/work'}
                                       activeClassName="active">Work experience</NavLink>
                             </li>
                             <li>
-                                <NavLink href="#" to={'/contact'}
+                                <NavLink href="#" to={'/react-cv/contact'}
                                       activeClassName="active">Contacts</NavLink>
                             </li>
                         </ul>

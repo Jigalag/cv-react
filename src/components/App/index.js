@@ -1,5 +1,5 @@
 import React from 'react';
-import { Switch, Route } from "react-router-dom";
+import { Switch, Route, Redirect} from "react-router-dom";
 import Header from '../../components/Header';
 import Home from '../../components/Home';
 import About from '../../components/About';
@@ -15,10 +15,11 @@ function App() {
             <section className="mainWrapper">
                 {/*<Fade>*/}
                     <Switch>
-                        <Route exact path="/" component={Home}/>
-                        <Route path="/about" component={About}/>
-                        <Route exact path="/projects" component={Projects}/>
-                        <Route path="/projects/:id" component={Project}/>
+                        <Redirect exact from="/" to="/react-cv/" />
+                        <Route exact path="/react-cv/" component={Home}/>
+                        <Route path="/react-cv/about" component={About}/>
+                        <Route exact path="/react-cv/projects" component={Projects}/>
+                        <Route path="/react-cv/projects/:id" component={Project}/>
                     </Switch>
                 {/*</Fade>*/}
             </section>
