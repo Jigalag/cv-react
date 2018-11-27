@@ -6,8 +6,8 @@ class Header extends Component {
         return (
             <header>
                 <div className="container">
-                    <NavLink href="#" className="headerLogo" exact to={'/cv-react/'}>
-                        <img src="/cv-react/img/logo.png"
+                    <NavLink href="#" className="headerLogo" exact to={'/'}>
+                        <img src="/img/logo.png"
                              alt="Alex.V - Front-End Developer"
                              title="Alex.V - Front-End Developer" />
                     </NavLink>
@@ -15,24 +15,24 @@ class Header extends Component {
                     <nav className="headerNavigation">
                         <ul>
                             <li>
-                                <NavLink href="#" exact to={'/cv-react/'}
+                                <NavLink href="#" exact to={'/'}
                                       activeClassName="active">Home</NavLink>
                             </li>
                             <li>
-                                <NavLink href="#" to={'/cv-react/about'}
+                                <NavLink href="#" to={'/about'}
                                       activeClassName="active">About</NavLink>
                             </li>
                             <li>
-                                <NavLink href="#" to={'/cv-react/projects'}
+                                <NavLink href="#" to={'/projects'}
                                       activeClassName="active"
                                       className="{'active': currentState == 'Project'}">Projects</NavLink>
                             </li>
                             <li>
-                                <NavLink href="#" to={'/cv-react/work'}
+                                <NavLink href="#" to={'/work'}
                                       activeClassName="active">Work experience</NavLink>
                             </li>
                             <li>
-                                <NavLink href="#" to={'/react-cv/contact'}
+                                <NavLink href="#" to={'/contact'}
                                       activeClassName="active">Contacts</NavLink>
                             </li>
                         </ul>
