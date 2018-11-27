@@ -1,7 +1,7 @@
 {
   "main.css": "/cv-react/static/css/main.5429f7e5.chunk.css",
-  "main.js": "/cv-react/static/js/main.2db9909d.chunk.js",
-  "main.js.map": "/cv-react/static/js/main.2db9909d.chunk.js.map",
+  "main.js": "/cv-react/static/js/main.74698150.chunk.js",
+  "main.js.map": "/cv-react/static/js/main.74698150.chunk.js.map",
   "static/js/1.9361a919.chunk.js": "/cv-react/static/js/1.9361a919.chunk.js",
   "static/js/1.9361a919.chunk.js.map": "/cv-react/static/js/1.9361a919.chunk.js.map",
   "runtime~main.js": "/cv-react/static/js/runtime~main.a30b86c6.js",
@@ -10,6 +10,6 @@
   "static/media/style.css": "/cv-react/static/media/preview.dcfe0e19.jpg",
   "static/css/main.5429f7e5.chunk.css.map": "/cv-react/static/css/main.5429f7e5.chunk.css.map",
   "index.html": "/cv-react/index.html",
-  "precache-manifest.5b758269db7e434dc2a63190f3f4a9b3.js": "/cv-react/precache-manifest.5b758269db7e434dc2a63190f3f4a9b3.js",
+  "precache-manifest.874962f1671768778737f1f673c07796.js": "/cv-react/precache-manifest.874962f1671768778737f1f673c07796.js",
   "service-worker.js": "/cv-react/service-worker.js"
 }

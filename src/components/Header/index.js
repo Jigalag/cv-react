@@ -7,7 +7,7 @@ class Header extends Component {
             <header>
                 <div className="container">
                     <NavLink href="#" className="headerLogo" exact to={'/cv-react/'}>
-                        <img src="/img/logo.png"
+                        <img src="/cv-react/img/logo.png"
                              alt="Alex.V - Front-End Developer"
                              title="Alex.V - Front-End Developer" />
                     </NavLink>
@@ -32,7 +32,7 @@ class Header extends Component {
                                       activeClassName="active">Work experience</NavLink>
                             </li>
                             <li>
-                                <NavLink href="#" to={'/cv-react/contact'}
+                                <NavLink href="#" to={'/react-cv/contact'}
                                       activeClassName="active">Contacts</NavLink>
                             </li>
                         </ul>
