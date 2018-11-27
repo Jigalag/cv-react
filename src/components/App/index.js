@@ -15,11 +15,11 @@ function App() {
             <section className="mainWrapper">
                 {/*<Fade>*/}
                     <Switch>
-                        <Redirect exact from="/" to="/react-cv/" />
-                        <Route exact path="/react-cv/" component={Home}/>
-                        <Route path="/react-cv/about" component={About}/>
-                        <Route exact path="/react-cv/projects" component={Projects}/>
-                        <Route path="/react-cv/projects/:id" component={Project}/>
+                        <Redirect exact from="/" to="/cv-react/" />
+                        <Route exact path="/cv-react/" component={Home}/>
+                        <Route path="/cv-react/about" component={About}/>
+                        <Route exact path="/cv-react/projects" component={Projects}/>
+                        <Route path="/cv-react/projects/:id" component={Project}/>
                     </Switch>
                 {/*</Fade>*/}
             </section>
