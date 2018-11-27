@@ -1,48 +1,39 @@
 import React, {Component} from 'react';
+import {  NavLink } from "react-router-dom";
 
 class Header extends Component {
-    constructor(props) {
-        super(props);
-
-    }
-
     render() {
         return (
             <header>
                 <div className="container">
-                    <a href="" className="headerLogo">
-                        <img src="app/assets/img/logo.png"
+                    <NavLink href="#" className="headerLogo" exact to={'/'}>
+                        <img src="/img/logo.png"
                              alt="Alex.V - Front-End Developer"
                              title="Alex.V - Front-End Developer" />
-                    </a>
-                    <MobileNavigation navigation=".headerNavigation" />
+                    </NavLink>
+                    {/*<MobileNavigation navigation=".headerNavigation" />*/}
                     <nav className="headerNavigation">
                         <ul>
                             <li>
-                                <a href=""
-                                   ui-sref="Home()"
-                                   ui-sref-active="active">Home</a>
+                                <NavLink href="#" exact to={'/'}
+                                      activeClassName="active">Home</NavLink>
                             </li>
                             <li>
-                                <a href=""
-                                   ui-sref="About()"
-                                   ui-sref-active="active">About</a>
+                                <NavLink href="#" to={'/about'}
+                                      activeClassName="active">About</NavLink>
                             </li>
                             <li>
-                                <a href=""
-                                   ui-sref="ProjectsList()"
-                                   ng-class="{'active': currentState == 'Project'}"
-                                   ui-sref-active="active">Projects</a>
+                                <NavLink href="#" to={'/projects'}
+                                      activeClassName="active"
+                                      className="{'active': currentState == 'Project'}">Projects</NavLink>
                             </li>
                             <li>
-                                <a href=""
-                                   ui-sref="Works()"
-                                   ui-sref-active="active">Work experience</a>
+                                <NavLink href="#" to={'/work'}
+                                      activeClassName="active">Work experience</NavLink>
                             </li>
                             <li>
-                                <a href=""
-                                   ui-sref="Contacts()"
-                                   ui-sref-active="active">Contacts</a>
+                                <NavLink href="#" to={'/contact'}
+                                      activeClassName="active">Contacts</NavLink>
                             </li>
                         </ul>
                     </nav>
