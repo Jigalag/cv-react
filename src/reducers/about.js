@@ -1,5 +1,4 @@
 export default function () {
-    console.log('asdas');
     return {
         "full_name": "Alexey Veprev",
         "avatar": "/img/avatar.png",
