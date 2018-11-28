@@ -15,7 +15,8 @@ import {createStore} from "redux";
 import cv from "../../reducers"
 import {Provider} from "react-redux";
 
-const store = createStore(cv);
+const store = createStore(cv,
+    window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__());
 
 class App extends Component {
 
