@@ -12,9 +12,7 @@ import '../../assets/css/style.css';
 import '../../assets/css/all.min.css';
 import Footer from "../Footer";
 
-
 class App extends Component {
-
     render() {
         return (
             <div>
