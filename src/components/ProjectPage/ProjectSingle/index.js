@@ -1,5 +1,6 @@
 import React from 'react';
 import {NavLink} from "react-router-dom";
+import PropTypes from 'prop-types';
 
 function ProjectSingle(props) {
     const project = props.project;
@@ -55,4 +56,8 @@ function ProjectSingle(props) {
         </div>
     )
 }
+ProjectSingle.propTypes = {
+    project: PropTypes.object
+};
+
 export default ProjectSingle;

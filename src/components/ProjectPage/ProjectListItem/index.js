@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 function ProjectListItem(props) {
     const project = props.project;
@@ -8,4 +9,8 @@ function ProjectListItem(props) {
         </div>
     )
 }
+ProjectListItem.propTypes = {
+    project: PropTypes.object
+};
+
 export default ProjectListItem;
