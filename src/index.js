@@ -6,15 +6,22 @@ import App from './components/App';
 import {createStore} from "redux";
 import cv from "./reducers";
 import {Provider} from "react-redux";
+import ScrollToTop from "./components/ScrollToTop"
 
 const history = createBrowserHistory();
 const store = createStore(cv,
     window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__());
 
+function handleUpdate() {
+    console.log(this.state);
+}
+
 render(
     <Provider store={store}>
-        <Router history={history}>
-            <App />
+        <Router history={history} onUpdate={handleUpdate}>
+            <ScrollToTop>
+                <App />
+            </ScrollToTop>
         </Router>
     </Provider>,
     document.getElementById('root')
