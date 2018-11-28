@@ -1,7 +1,8 @@
 import React, {Component} from 'react';
 import ProjectSingle from "./ProjectSingle";
 import ProjectListItem from "./ProjectListItem";
-import projects from "../../data/projects"
+import projects from "../../data/projects";
+import PropTypes from 'prop-types';
 
 class Project extends Component {
     constructor(props) {
@@ -25,4 +26,8 @@ class Project extends Component {
         )
     }
 }
+Project.propTypes = {
+    isList: PropTypes.bool,
+    project: PropTypes.object
+};
 export default Project;

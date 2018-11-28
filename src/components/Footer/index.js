@@ -1,9 +1,10 @@
 import React, {Component} from 'react';
+import PropTypes from 'prop-types';
 
 class Footer extends Component {
     constructor(props){
         super(props);
-        this.userData = props['UserData'] || {};
+        this.userData = props['UserData'];
     }
 
     render() {
@@ -48,4 +49,7 @@ class Footer extends Component {
         )
     }
 }
+Footer.propTypes = {
+    UserData: PropTypes.object
+};
 export default Footer;
