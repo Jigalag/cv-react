@@ -12,13 +12,9 @@ const history = createBrowserHistory();
 const store = createStore(cv,
     window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__());
 
-function handleUpdate() {
-    console.log(this.state);
-}
-
 render(
     <Provider store={store}>
-        <Router history={history} onUpdate={handleUpdate}>
+        <Router history={history}>
             <ScrollToTop>
                 <App />
             </ScrollToTop>
