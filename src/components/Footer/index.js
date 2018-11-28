@@ -1,10 +1,12 @@
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
+// import {bindActionCreators} from "redux";
+import {connect} from "react-redux";
 
 class Footer extends Component {
     constructor(props){
         super(props);
-        this.userData = props['UserData'];
+        this.userData = props.userData;
     }
 
     render() {
@@ -52,4 +54,10 @@ class Footer extends Component {
 Footer.propTypes = {
     UserData: PropTypes.object
 };
-export default Footer;
+
+function mapStateToProps (state) {
+    return {
+        userData: state.about
+    }
+}
+export default connect(mapStateToProps)(Footer);

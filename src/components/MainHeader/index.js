@@ -1,5 +1,5 @@
 import React from 'react';
-import homeData from '../../data/home'
+import connect from "react-redux/es/connect/connect";
 
 function MainHeader(props) {
     return (
@@ -8,11 +8,18 @@ function MainHeader(props) {
                 <span className="borderItem">
                 </span>
                 <h1>
-                    <span dangerouslySetInnerHTML={{__html: homeData.title}}>
+                    <span dangerouslySetInnerHTML={{__html: props.homeData.title}}>
                     </span>
                 </h1>
             </div>
         </div>
     )
 }
-export default MainHeader;
+
+function mapStateToProps (state) {
+    return {
+        homeData: state.home
+    }
+}
+
+export default connect(mapStateToProps)(MainHeader);

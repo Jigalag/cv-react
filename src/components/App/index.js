@@ -11,30 +11,32 @@ import '../../assets/css/fonts/stylesheet.css';
 import '../../assets/css/style.css';
 import '../../assets/css/all.min.css';
 import Footer from "../Footer";
-import userData from "../../data/about";
+import {createStore} from "redux";
+import cv from "../../reducers"
+import {Provider} from "react-redux";
+
+const store = createStore(cv);
 
 class App extends Component {
-    constructor(props) {
-        super(props);
-        this.userData = userData;
-    }
 
     render() {
         return (
-            <div>
-                <Header />
-                <section className="mainWrapper">
-                    <Switch>
-                        <Route exact path="/" component={() => <Home AboutData={this.userData} />}/>
-                        <Route path="/about" component={() => <About AboutData={this.userData} />}/>
-                        <Route exact path="/projects" component={Projects}/>
-                        <Route path="/projects/:id" component={Project}/>
-                        <Route path="/work" component={Work}/>
-                        <Route path="/contact" component={Contact}/>
-                    </Switch>
-                </section>
-                <Footer UserData={this.userData}/>
-            </div>
+            <Provider store={store}>
+                <div>
+                    <Header />
+                    <section className="mainWrapper">
+                        <Switch>
+                            <Route exact path="/" component={Home}/>
+                            <Route path="/about" component={About}/>
+                            <Route exact path="/projects" component={Projects}/>
+                            <Route path="/projects/:id" component={Project}/>
+                            <Route path="/work" component={Work}/>
+                            <Route path="/contact" component={Contact}/>
+                        </Switch>
+                    </section>
+                    <Footer/>
+                </div>
+            </Provider>
         )
     }
 }

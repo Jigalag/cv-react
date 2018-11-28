@@ -3,8 +3,8 @@ import PropTypes from 'prop-types';
 
 function WorkItem(props) {
     const company = props.company;
-    const technologies = company.technologies.map((tech) =>
-        <span>{tech}</span>
+    const technologies = company.technologies.map((tech, key) =>
+        <span key={key}>{tech}</span>
     );
     const webSite = company.web_site && (
         <li className="skill">

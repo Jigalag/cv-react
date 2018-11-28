@@ -1,15 +1,20 @@
 import React, {Component} from 'react';
 import { NavLink } from "react-router-dom";
 import Project from "../ProjectPage";
-import projects from "../../data/projects";
 import PropTypes from 'prop-types';
 import ProjectsMainPage from "./ProjectsMainPage";
 import ProjectsDefault from "./ProjectsDefault";
+import connect from "react-redux/es/connect/connect";
 
 class Projects extends Component {
 
+    constructor(props){
+        super(props);
+        this.projects = props.projects;
+    }
+
     render() {
-        const ProjectsElements = projects.map(project =>
+        const ProjectsElements = this.projects.map(project =>
             <NavLink href="#" to={'/projects/'+project.id} key={project.id} className="project" style={{'backgroundImage': `url(${project.image})`}}>
                 <Project project = {project} isList/>
             </NavLink>
@@ -27,4 +32,11 @@ class Projects extends Component {
 Projects.propTypes = {
     MainPageList: PropTypes.bool
 };
-export default Projects;
+
+function mapStateToProps (state) {
+    return {
+        projects: state.projects
+    }
+}
+
+export default connect(mapStateToProps)(Projects);

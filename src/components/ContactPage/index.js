@@ -1,10 +1,14 @@
 import React, {Component} from 'react';
-import contactData from '../../data/contact'
+import connect from "react-redux/es/connect/connect";
 
 class Contact extends Component {
+    constructor(props){
+        super(props);
+        this.contactData = props.contact;
+    }
     render() {
-        const contactItem = contactData.social_links.map(link =>
-            <li className="skill">
+        const contactItem = this.contactData.social_links.map((link, key) =>
+            <li className="skill" key={key}>
                 <a href={link.url}>
                     <span dangerouslySetInnerHTML={{__html: link.ico}}>
                     </span>
@@ -17,7 +21,7 @@ class Contact extends Component {
                 <div className="container smallContainer">
                     <div className="simpleText textCenter contactPage">
                         <h2>Contacts</h2>
-                        <p>{ contactData.contact_text }</p>
+                        <p>{ this.contactData.contact_text }</p>
                     </div>
                 </div>
                 <div className="purpleSection">
@@ -35,4 +39,10 @@ class Contact extends Component {
         )
     }
 }
-export default Contact;
+function mapStateToProps (state) {
+    return {
+        contact: state.contact
+    }
+}
+
+export default connect(mapStateToProps)(Contact);
