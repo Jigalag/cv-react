@@ -1015,7 +1015,7 @@ footer .socialLinks ul li a:hover i {
   footer .userData .userInfo .userTitle {
     margin-left: 0;
     float: none;
-    display: inline-block;
+    display: block;
   }
   footer .socialLinks {
     text-align: center;
