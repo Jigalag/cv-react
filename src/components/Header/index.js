@@ -1,7 +1,10 @@
 import React, {Component} from 'react';
 import {  NavLink } from "react-router-dom";
+import MobileNavigation from "../../components/MobileNavigation"
+import connect from "react-redux/es/connect/connect";
 
 class Header extends Component {
+
     render() {
         return (
             <header>
@@ -11,8 +14,8 @@ class Header extends Component {
                              alt="Alex.V - Front-End Developer"
                              title="Alex.V - Front-End Developer" />
                     </NavLink>
-                    {/*<MobileNavigation navigation=".headerNavigation" />*/}
-                    <nav className="headerNavigation">
+                    <MobileNavigation/>
+                    <nav className={this.props.nav.isOpen ? "headerNavigation active" : "headerNavigation"}>
                         <ul>
                             <li>
                                 <NavLink href="#" exact to={'/'}
@@ -42,4 +45,10 @@ class Header extends Component {
         )
     }
 }
-export default Header;
+function mapStateToProps (state) {
+    return {
+        nav: state.nav
+    }
+}
+
+export default connect(mapStateToProps)(Header);
