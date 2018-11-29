@@ -14,7 +14,7 @@ class Projects extends Component {
     }
 
     render() {
-        const ProjectsElements = this.projects.map(project =>
+        const ProjectsElements = this.projects.splice(0, this.props.Limit).map(project =>
             <NavLink href="#" to={'/projects/'+project.id} key={project.id} className="project" style={{'backgroundImage': `url(${project.image})`}}>
                 <Project project = {project} isList/>
             </NavLink>
@@ -30,7 +30,8 @@ class Projects extends Component {
     }
 }
 Projects.propTypes = {
-    MainPageList: PropTypes.bool
+    MainPageList: PropTypes.bool,
+    Limit: PropTypes.number
 };
 
 function mapStateToProps (state) {

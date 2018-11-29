@@ -10,7 +10,7 @@ class Home extends Component {
             <div>
                 <MainHeader/>
                 <About MainPageAbout/>
-                <Projects MainPageList/>
+                <Projects MainPageList Limit={6}/>
             </div>
         )
     }
