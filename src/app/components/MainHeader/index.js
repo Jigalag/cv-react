@@ -8,7 +8,7 @@ class MainHeader extends Component {
         this.newTitle = "<span>Coding</span> is a <span>Life</span>";
     }
 
-    changeTitle = (newTitle) => {
+    changeTitle(newTitle) {
         this.props.changeTitle(newTitle);
     };
 

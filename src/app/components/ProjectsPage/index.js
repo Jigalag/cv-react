@@ -14,7 +14,9 @@ class Projects extends Component {
     }
 
     render() {
-        const ProjectsElements = this.projects.splice(0, this.props.Limit).map(project =>
+        const projects = [...this.projects];
+        const filteredProjects = this.props.MainPageList ? projects.splice(0, this.props.Limit) : this.projects;
+        const ProjectsElements = filteredProjects.map(project =>
             <NavLink href="#" to={'/projects/'+project.id} key={project.id} className="project" style={{'backgroundImage': `url(${project.image})`}}>
                 <Project project = {project} isList/>
             </NavLink>

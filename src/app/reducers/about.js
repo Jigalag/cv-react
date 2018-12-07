@@ -1,6 +1,6 @@
 const aboutData = {
     "full_name": "Alexey Veprev",
-    "avatar": "/img/avatar.png",
+    "avatar": "/images/avatar.png",
     "position": "Middle JavaScript Engineer",
     "company": "Lohika",
     "location": "Odessa, Ukraine",

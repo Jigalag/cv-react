@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import {  NavLink } from "react-router-dom";
-import MobileNavigation from "../../components/MobileNavigation"
+import MobileNavigation from "../MobileNavigation"
 import connect from "react-redux/es/connect/connect";
 
 class Header extends Component {
@@ -10,7 +10,7 @@ class Header extends Component {
             <header>
                 <div className="container">
                     <NavLink href="#" className="headerLogo" exact to={'/'}>
-                        <img src="/img/logo.png"
+                        <img src="/images/logo.png"
                              alt="Alex.V - Front-End Developer"
                              title="Alex.V - Front-End Developer" />
                     </NavLink>

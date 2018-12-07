@@ -9,6 +9,7 @@ import {Provider} from "react-redux";
 import ScrollToTop from "./components/ScrollToTop"
 
 const history = createBrowserHistory();
+
 const store = createStore(cv,
     window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__());
 
