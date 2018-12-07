@@ -8,8 +8,8 @@ import Work from '../WorkPage';
 import Projects from '../ProjectsPage';
 import Project from '../ProjectPage';
 import '../../../assets/fonts/stylesheet.scss';
-import '../../../assets/css/style.scss';
-import '../../../assets/css/all.min.scss';
+import '../../../assets/styles/style.scss';
+import '../../../assets/styles/all.min.scss';
 import Footer from "../Footer";
 
 class App extends Component {
