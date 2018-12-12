@@ -1,17 +1,15 @@
-import React, {Component} from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import connect from "react-redux/es/connect/connect";
 
-class MobileNavigation extends Component {
-    render() {
-        return (
-            <div className={this.props.nav.isOpen ? "navBurger active" : "navBurger"}
-                 onClick={this.props.toggleNav}>
-                <span>
-                </span>
-            </div>
-        )
-    }
+function MobileNavigation(props) {
+    return (
+        <div className={props.nav.isOpen ? "navBurger active" : "navBurger"}
+             onClick={props.toggleNav}>
+            <span>
+            </span>
+        </div>
+    )
 }
 MobileNavigation.propTypes = {
     IsOpen: PropTypes.bool,
