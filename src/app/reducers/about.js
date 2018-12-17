@@ -31,6 +31,18 @@ const aboutData = {
             "level": 7
         },
         {
+            "title": "React",
+            "level": 7
+        },
+        {
+            "title": "Redux",
+            "level": 7
+        },
+        {
+            "title": "Node.js",
+            "level": 7
+        },
+        {
             "title": "ES5",
             "level": 9
         },
@@ -55,32 +67,36 @@ const aboutData = {
             "level": 8
         },
         {
+            "title": "Git",
+            "level": 8
+        },
+        {
+            "title": "Grunt",
+            "level": 7
+        },
+        {
+            "title": "Gulp",
+            "level": 8
+        },
+        {
+            "title": "Webpack",
+            "level": 8
+        },
+        {
             "title": "Photoshop",
             "level": 9
         },
         {
             "title": "PHP",
-            "level": 7
+            "level": 8
         },
         {
             "title": "WordPress",
             "level": 8
         },
         {
-            "title": "Git",
-            "level": 8
-        },
-        {
-            "title": "Grunt",
-            "level": 6
-        },
-        {
-            "title": "Gulp",
-            "level": 7
-        },
-        {
             "title": "Codeigniter",
-            "level": 6
+            "level": 7
         },
         {
             "title": "Apiary",
@@ -88,7 +104,7 @@ const aboutData = {
         },
         {
             "title": "MySQL",
-            "level": 5
+            "level": 7
         }
     ],
     "social_links": [
