@@ -1,3 +1,5 @@
+import { GET_USER } from '../constants/about';
+
 const aboutData = {
     "full_name": "Alexey Veprev",
     "avatar": "/images/avatar.png",
@@ -28,10 +30,6 @@ const aboutData = {
         },
         {
             "title": "TypeScript",
-            "level": 7
-        },
-        {
-            "title": "React",
             "level": 7
         },
         {
@@ -131,9 +129,11 @@ const aboutData = {
     ]
 };
 
-export default function (state = aboutData, action) {
-    switch (action.type) {
-        default: break;
+export default function (state = aboutData, { type, payload }) {
+    switch (type) {
+        case GET_USER:
+            return { ...state, ...payload};
+        default:
+            return state;
     }
-    return state;
 }

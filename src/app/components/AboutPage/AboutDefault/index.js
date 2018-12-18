@@ -22,7 +22,7 @@ function AboutDefault(props) {
     return (
         <div className="container smallContainer">
             <div className="simpleText textLeft">
-                <div dangerouslySetInnerHTML={{__html: aboutInfo.about_page}}>
+                <div dangerouslySetInnerHTML={{__html: aboutInfo.aboutPage}}>
                 </div>
                 <h3>My professional skills:</h3>
                 <ul className="skills">

@@ -1,14 +1,14 @@
 import React, {Component} from 'react';
 import { Switch, Route } from "react-router-dom";
-import Header from '../Header';
-import Home from '../HomePage';
-import About from '../AboutPage';
-import Contact from '../ContactPage';
-import Work from '../WorkPage';
-import Projects from '../ProjectsPage';
-import Project from '../ProjectPage';
+import Header from '../../components/Header';
+import Home from '../../components/HomePage';
+import About from '../../components/AboutPage';
+import Contact from '../../components/ContactPage';
+import Work from '../../components/WorkPage';
+import Projects from '../../components/ProjectsPage';
+import Project from '../../components/ProjectPage';
 import '../../../assets/styles/style.scss';
-import Footer from "../Footer";
+import Footer from "../../components/Footer";
 
 class App extends Component {
     render() {

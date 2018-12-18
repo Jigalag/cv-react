@@ -3,20 +3,21 @@ import PropTypes from 'prop-types';
 import AboutMainPage from "./AboutMainPage";
 import AboutDefault from "./AboutDefault";
 import connect from "react-redux/es/connect/connect";
+import {getUserData} from "../../redux/actions/about";
 
 class About extends Component {
-    constructor(props){
-        super(props);
-        this.aboutData = props.userData;
+    componentDidMount() {
+        this.props.getData();
     }
+
     render() {
         if (this.props.MainPageAbout){
             return (
-                <AboutMainPage AboutData={this.aboutData}/>
+                <AboutMainPage AboutData={this.props.userData}/>
             )
         }
         return (
-            <AboutDefault AboutData={this.aboutData}/>
+            <AboutDefault AboutData={this.props.userData}/>
         )
     }
 }
@@ -30,4 +31,9 @@ function mapStateToProps (state) {
         userData: state.about
     }
 }
-export default connect(mapStateToProps)(About);
+function mapDispatchToProps (dispatch) {
+    return {
+        getData: () => dispatch(getUserData())
+    }
+}
+export default connect(mapStateToProps, mapDispatchToProps)(About);
