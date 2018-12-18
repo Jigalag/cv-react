@@ -9,8 +9,14 @@ import Projects from '../../components/ProjectsPage';
 import Project from '../../components/ProjectPage';
 import '../../../assets/styles/style.scss';
 import Footer from "../../components/Footer";
+import {getUserData} from "../../redux/actions/about";
+import connect from "react-redux/es/connect/connect";
+import {withRouter} from "react-router-dom";
 
 class App extends Component {
+    componentDidMount() {
+        this.props.getData();
+    }
     render() {
         return (
             <div>
@@ -30,4 +36,17 @@ class App extends Component {
         )
     }
 }
-export default App;
+function mapStateToProps (state) {
+    return {
+        userData: state.about
+    }
+}
+function mapDispatchToProps (dispatch) {
+    return {
+        getData: () => {
+            dispatch(getUserData())
+        }
+    }
+}
+// export default App;
+export default withRouter(connect(mapStateToProps, mapDispatchToProps)(App));

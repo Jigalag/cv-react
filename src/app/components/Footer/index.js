@@ -1,6 +1,5 @@
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
-// import {bindActionCreators} from "redux";
 import {connect} from "react-redux";
 
 class Footer extends Component {
@@ -10,7 +9,7 @@ class Footer extends Component {
     }
 
     render() {
-        const Social = this.userData.social_links.map((link, key) => {
+        const Social = this.userData.socialLinks && this.userData.socialLinks.map((link, key) => {
             return link.show && (
                 <li key={key}>
                     <a href={link.url} target="_blank" rel="noopener noreferrer"
@@ -26,15 +25,15 @@ class Footer extends Component {
                         <div className="userInfo">
                             <div className="userAvatar">
                                 <img src={this.userData.avatar}
-                                     alt={(this.userData.full_name + ' | ' + this.userData.position + ' | ' + this.userData.company)}
-                                     title={(this.userData.full_name + ' | ' + this.userData.position + ' | ' + this.userData.company)} />
+                                     alt={(this.userData.fullName + ' | ' + this.userData.position + ' | ' + this.userData.company)}
+                                     title={(this.userData.fullName + ' | ' + this.userData.position + ' | ' + this.userData.company)} />
                             </div>
                             <div className="userTitle">
                                 <div className="userName">
-                                    { this.userData.full_name }
+                                    { this.props.userData.fullName }
                                 </div>
                                 <div className="userPosition">
-                                    { this.userData.position } | { this.userData.company } | { this.userData.location }
+                                    { this.props.userData.position } | { this.props.userData.company } | { this.props.userData.address }
                                 </div>
                             </div>
                         </div>
