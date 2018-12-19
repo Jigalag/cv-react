@@ -1,12 +1,9 @@
 import { GET_USER } from '../constants/about';
 
-const aboutData = {
-};
-
-export default function (state = aboutData, { type, payload }) {
+export default function (state = {}, { type, payload }) {
     switch (type) {
         case GET_USER:
-            const fullName = `${payload.firstName} ${payload.lastName}`;
+            const fullName = `${payload['firstName']} ${payload['lastName']}`;
             payload.fullName = fullName;
             return { ...state, ...payload};
         default:
