@@ -1,10 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-function WorkItem(props) {
+function CompanyItem(props) {
     const company = props.company;
     const technologies = company.technologies.map((tech, key) =>
-        <span key={key}>{tech}</span>
+        <span key={key}>{tech}{key < (company.technologies.length - 1) ? ',' : ''}</span>
     );
     const webSite = company.web_site && (
         <li className="skill">
@@ -31,13 +31,13 @@ function WorkItem(props) {
                     <li className="skill">
                         <span>Position</span> <span>{company.position}</span>
                     </li>
-                    <li className="skill">
-                        <span>Responsibilities</span> <span>{company.responsibilities}</span>
-                    </li>
-                    <li className="skill">
+                    {company['responsibilities'] && <li className="skill">
+                        <span>Responsibilities</span> <span>{company['responsibilities']}</span>
+                    </li>}
+                    {technologies.length > 0 && <li className="skill">
                         <span>Technologies</span>
                         {technologies}
-                    </li>
+                    </li>}
                     {startDate}
                     {webSite}
                 </ul>
@@ -45,8 +45,8 @@ function WorkItem(props) {
         </div>
     )
 }
-WorkItem.propTypes = {
+CompanyItem.propTypes = {
     company: PropTypes.object
 };
 
-export default WorkItem;
+export default CompanyItem;

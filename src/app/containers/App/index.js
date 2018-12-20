@@ -4,7 +4,7 @@ import Header from '../../components/Header';
 import Home from '../../components/HomePage';
 import About from '../../components/AboutPage';
 import Contact from '../../components/ContactPage';
-import Work from '../../components/WorkPage';
+import Company from '../../components/CompanyPage';
 import Projects from '../../components/ProjectsPage';
 import Project from '../../components/ProjectPage';
 import '../../../assets/styles/style.scss';
@@ -27,7 +27,7 @@ class App extends Component {
                         <Route path="/about" component={About}/>
                         <Route exact path="/projects" component={Projects}/>
                         <Route exact path="/projects/:id" component={Project}/>
-                        <Route path="/work" component={Work}/>
+                        <Route path="/work" component={Company}/>
                         <Route path="/contact" component={Contact}/>
                     </Switch>
                 </section>
@@ -48,5 +48,4 @@ function mapDispatchToProps (dispatch) {
         }
     }
 }
-// export default App;
 export default withRouter(connect(mapStateToProps, mapDispatchToProps)(App));

@@ -1,15 +1,18 @@
+import {CHANGE_TITLE} from '../constants/home';
+
 const homeData = {
     "title": "<span>Coding</span> is an <span>Art</span>"
 };
-export default function (state = homeData, action) {
-    switch (action.type) {
-        case "CHANGE_TITLE":
+
+export default function (state = homeData, {type, payload}) {
+    switch (type) {
+        case CHANGE_TITLE:
             const newState = {
                 ...state
             };
-            newState.title = action.payload;
+            newState.title = payload;
             return newState;
-        default: break;
+        default:
+            return state;
     }
-    return state;
 }
