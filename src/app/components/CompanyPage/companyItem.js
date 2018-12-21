@@ -6,20 +6,20 @@ function CompanyItem(props) {
     const technologies = company.technologies.map((tech, key) =>
         <span key={key}>{tech}{key < (company.technologies.length - 1) ? ',' : ''}</span>
     );
-    const webSite = company.web_site && (
+    const webSite = company.webSite && (
         <li className="skill">
             <span>Website</span>
             <span>
-                <a href={company.web_site} target="_blank" rel="noopener noreferrer">
-                    {company.web_site}
+                <a href={company.webSite} target="_blank" rel="noopener noreferrer">
+                    {company.webSite}
                 </a>
             </span>
         </li>
     );
-    const startDate = company.start_date && (
+    const startDate = company.startDate && (
         <li className="skill">
             <span>Worked</span>
-            <span>{company.start_date} - {company.end_date ? company.end_date : 'Now'}</span>
+            <span>{company.startDate} - {company.endDate ? company.endDate : 'Now'}</span>
         </li>
     );
     return (
