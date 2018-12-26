@@ -3,13 +3,9 @@ import PropTypes from 'prop-types';
 import {connect} from "react-redux";
 
 class Footer extends Component {
-    constructor(props){
-        super(props);
-        this.userData = props.userData;
-    }
 
     render() {
-        const Social = this.userData.socialLinks && this.userData.socialLinks.map((link, key) => {
+        const Social = this.props.userData.socialLinks && this.props.userData.socialLinks.map((link, key) => {
             return link.show && (
                 <li key={key}>
                     <a href={link.url} target="_blank" rel="noopener noreferrer"
@@ -19,14 +15,15 @@ class Footer extends Component {
             )
         });
         return (
+
             <footer>
                 <div className="container">
                     <div className="userData perHalf floatLeft">
                         <div className="userInfo">
                             <div className="userAvatar">
-                                <img src={this.userData.avatar}
-                                     alt={(this.userData.fullName + ' | ' + this.userData.position + ' | ' + this.userData.company)}
-                                     title={(this.userData.fullName + ' | ' + this.userData.position + ' | ' + this.userData.company)} />
+                                <img src={this.props.userData.avatar}
+                                     alt={(this.props.userData.fullName + ' | ' + this.props.userData.position + ' | ' + this.props.userData.company)}
+                                     title={(this.props.userData.fullName + ' | ' + this.props.userData.position + ' | ' + this.props.userData.company)} />
                             </div>
                             <div className="userTitle">
                                 <div className="userName">
