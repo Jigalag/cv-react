@@ -36,7 +36,9 @@ function CompanyItem(props) {
                     </li>}
                     {technologies.length > 0 && <li className="skill">
                         <span>Technologies</span>
-                        {technologies}
+                        <span>
+                            {technologies}
+                        </span>
                     </li>}
                     {startDate}
                     {webSite}
