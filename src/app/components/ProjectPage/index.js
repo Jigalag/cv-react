@@ -10,7 +10,7 @@ class Project extends Component {
         this.projects = props.projects;
         this.isList = props.isList;
         this.project = props.project;
-        this.projectId = (this.props.match && this.props.match.params ? this.props.match.params : 0).id * 1;
+        this.projectId = (this.props.match && this.props.match.params) ? this.props.match.params.id * 1 : 0;
         if (!this.project && this.projectId !== 0) {
             this.project = this.projects.find((project) => {
                 return project.id === this.projectId;

@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 function CompanyItem(props) {
     const company = props.company;
     const technologies = company.technologies.map((tech, key) =>
-        <span key={key}>{tech}{key < (company.technologies.length - 1) ? ',' : ''}</span>
+        <span key={key}>{tech}</span>
     );
     const webSite = company['webSite'] && (
         <li className="skill">
